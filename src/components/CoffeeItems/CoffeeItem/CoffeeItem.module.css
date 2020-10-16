@@ -1,0 +1,17 @@
+.CoffeeItem {
+    width: 25%;
+    background-color: azure;
+}
+
+.CoffeeItem p {
+    align-items: left;
+    margin: 0px 4px;
+}
+
+.CoffeeItem h2 {
+    text-align: center;
+}
+
+.CoffeeItem:hover {
+    background-color: bisque;
+}
