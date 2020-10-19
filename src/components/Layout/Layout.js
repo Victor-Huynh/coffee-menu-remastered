@@ -1,14 +1,15 @@
 import React from 'react';
 import Auxiliary from '../../hoc/Auxiliary';
-import CoffeeBuilder from '../CoffeeBuilder/CoffeeBuilder';
-import CoffeeItems from '../CoffeeItems/CoffeeItems';
+import classes from './Layout.module.css';
 
-const Layout = () => {
-    return (<Auxiliary>
-        <CoffeeItems/>
-        <CoffeeBuilder/>
-        <div>Menu Bar</div>
-    </Auxiliary>
+const Layout = (props) => {
+    return (
+        <Auxiliary>
+            <div>Menu/Top Bar</div>
+            <main className={classes.Content}>
+                {props.children}
+            </main>
+        </Auxiliary>
     );
 }
 
