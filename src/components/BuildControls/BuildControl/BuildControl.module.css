@@ -1,3 +1,16 @@
 .BuildControl {
-    text-align: center;
+    display: flex;
+    width: 30%;
+    margin: auto;
+    /* justify-content: space-evenly; */
+}
+
+.Left {
+    width: 100%;
+    text-align: left;
+}
+
+.Right {
+    width: 100%;
+    text-align: right;
 }

@@ -14,6 +14,7 @@ const BuildControls = (props) => {
         <BuildControl
             label={ingredient.label}
             key={ingredient.label}
+            ingredientCounter={props.ingredientList[ingredient.type]}
             added={() => props.addIngredient(ingredient.type, ingredient.price)}
             removed={() => props.subtractIngredient(ingredient.type, ingredient.price)}
         />
@@ -24,6 +25,7 @@ const BuildControls = (props) => {
             {props.drinkSelected ? <h2>Customize your {props.drinkSelection}</h2> : <h2>Please select a drink!</h2>}
             {props.drinkSelected ? <h3>Your current subtotal is: ${props.subtotal.toFixed(2)}</h3> : null}
             {props.drinkSelected ? customizableIngredientList : null}
+            {props.drinkSelected ? <button onClick={props.displayOrderSummary}>Checkout</button> : null}
         </div>
     );
 }
